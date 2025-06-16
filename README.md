@@ -26,3 +26,66 @@ Accessible in-game via Forge’s mod menu, or manually via bossmobenhancer.cfg. 
 
 💡 For Mod Developers:
 Boss Mob Enhancer is designed to be extensible. Easily plug in new abilities, scale logic, or UI elements. Planning a framework to expose boss profiles and NBT tags for integration with other mods or mapmakers.
+├── build.gradle
+├── settings.gradle
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── example
+│       │           └── bossmobenhancer
+│       │               ├── MainMod.java
+│       │               ├── ai
+│       │               │   ├── ArmorHandler.java
+│       │               │   ├── AttributeSyncer.java
+│       │               │   ├── BehaviorScaler.java
+│       │               │   ├── MinionSpawner.java
+│       │               │   ├── ParticleEmitter.java
+│       │               │   ├── SpecialAbilities.java
+│       │               │   └── TerrainManipulator.java
+│       │               ├── client
+│       │               │   ├── BossOverlayHandler.java
+│       │               │   ├── BossRegistry.java
+│       │               │   ├── GuiConfigScreen.java
+│       │               │   └── GuiFactory.java
+│       │               ├── commands
+│       │               │   └── BossProfileCommand.java
+│       │               ├── config
+│       │               │   └── ConfigHandler.java
+│       │               ├── data
+│       │               │   └── ScalingProfileLoader.java
+│       │               ├── events
+│       │               │   ├── BossMobEnhancer.java
+│       │               │   ├── PassiveMobHostilityHandler.java
+│       │               │   ├── BossLootHandler.java
+│       │               │   ├── BossRewardHandler.java
+│       │               │   └── LordSpawnHandler.java
+│       │               ├── items
+│       │               │   └── ItemLunarBlessedApple.java
+│       │               └── utils
+│       │                   ├── EnchantmentUtils.java
+│       │                   └── NameGenerator.java
+│       └── resources
+│           ├── META-INF
+│           │   └── mods.toml
+│           └── assets
+│               └── bossmobenhancer
+│                   ├── logo.png
+│                   ├── lang
+│                   │   ├── en_us.lang
+│                   │   ├── fr_fr.lang
+│                   │   ├── de_de.lang
+│                   │   ├── ja_jp.lang
+│                   │   ├── zh_cn.lang
+│                   │   └── es_es.lang
+│                   ├── models
+│                   │   └── item
+│                   │       └── lunar_blessed_apple.json
+│                   └── textures
+│                       └── items
+│                           └── lunar_blessed_apple.png
+└── config
+    └── bossmobenhancer
+        ├── bossmobenhancer.cfg
+        ├── scaling_profiles.json
+        └── README.txt
