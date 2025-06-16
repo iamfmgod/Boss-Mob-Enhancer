@@ -1,0 +1,6 @@
+mod.bossmobenhancer.name=ボスモブエンハンサー
+mod.bossmobenhancer.description=動的なボス進化と戦闘強化システム。
+
+command.bossprofile.usage=/bossprofile <プロファイル名>
+command.bossprofile.success=ボススケーリングプロファイルが %s に設定されました
+command.bossprofile.error=プロファイル '%s' は見つかりません

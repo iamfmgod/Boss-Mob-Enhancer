@@ -1,0 +1,11 @@
+mod.bossmobenhancer.name=Boss Mob Enhancer
+mod.bossmobenhancer.description=Dynamisches Boss-Evolutions- und Kampferweiterungssystem.
+
+command.bossprofile.usage=/bossprofile <Profilname>
+command.bossprofile.success=Boss-Skalierungsprofil auf %s gesetzt
+command.bossprofile.error=Profil '%s' nicht gefundenmod.bossmobenhancer.name=Amplificateur de Boss
+                                                    mod.bossmobenhancer.description=Système d’évolution dynamique et de renforcement des boss.
+
+                                                    command.bossprofile.usage=/bossprofile <NomDuProfil>
+                                                    command.bossprofile.success=Profil de boss défini sur %s
+                                                    command.bossprofile.error=Profil '%s' introuvable

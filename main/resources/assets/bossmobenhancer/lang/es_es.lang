@@ -1,0 +1,6 @@
+mod.bossmobenhancer.name=Mejorador de Jefes
+mod.bossmobenhancer.description=Sistema dinámico de evolución y mejora de combate para jefes.
+
+command.bossprofile.usage=/bossprofile <NombreDelPerfil>
+command.bossprofile.success=Perfil de jefes cambiado a %s
+command.bossprofile.error=Perfil '%s' no encontrado

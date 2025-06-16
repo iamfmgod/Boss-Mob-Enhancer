@@ -1,0 +1,6 @@
+mod.bossmobenhancer.name=Boss强化器
+mod.bossmobenhancer.description=动态的Boss进化与战斗增强系统。
+
+command.bossprofile.usage=/bossprofile <配置名称>
+command.bossprofile.success=Boss配置已切换为 %s
+command.bossprofile.error=未找到配置 '%s'
