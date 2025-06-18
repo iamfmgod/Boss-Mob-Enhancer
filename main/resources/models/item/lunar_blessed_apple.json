@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "bossmobenhancer:items/lunar_blessed_apple"
-  }
-}
