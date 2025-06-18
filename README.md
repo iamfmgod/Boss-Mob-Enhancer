@@ -16,7 +16,7 @@ From blink-teleportation and aura debuffs to terrain-altering strikes and minion
 Full support for modded mobs from popular content packs like Twilight Forest, Lycanite’s Mobs, and more.
 
 🔧 Configuration:
-Accessible in-game via Forge’s mod menu, or manually via bossmobenhancer.cfg. Key options include:
+Accessible in-game via Forge’s mod menu or manually via bossmobenhancer.cfg. Key options include
 - Enhancement chance
 - Max tier
 - Difficulty preset or custom weights
@@ -27,7 +27,13 @@ Accessible in-game via Forge’s mod menu, or manually via bossmobenhancer.cfg. 
 💡 For Mod Developers:
 Boss Mob Enhancer is designed to be extensible. Easily plug in new abilities, scale logic, or UI elements. Planning a framework to expose boss profiles and NBT tags for integration with other mods or mapmakers.
 
+Compiled on mccreator due to IDE trouble; will resolve ASAP
 
+Made with the assistance of Sweep AI and Copilot.
+
+BossMobEnhancer Release 2
+
+Dramatic GUI and scaling reforms, new item added, new terrain, new particle effects, new abilities, more of a V2 really. Sorry, I could not get the nameplate toggle to work on this update. I've put all the legwork in; it's just debugging now :3
 
 ├── build.gradle
 ├── settings.gradle
@@ -49,14 +55,19 @@ Boss Mob Enhancer is designed to be extensible. Easily plug in new abilities, sc
 │       │               ├── client
 │       │               │   ├── BossOverlayHandler.java
 │       │               │   ├── BossRegistry.java
-│       │               │   ├── GuiConfigScreen.java
-│       │               │   └── GuiFactory.java
+│       │               │   ├── GuiFactory.java
+│       │               │   ├── GuiConfigScreen.java         ← (Legacy/Optional)
+│       │               │   ├── GuiMainConfigScreen.java       ← New: Main config screen for choosing Basic/Advanced
+│       │               │   ├── GuiBasicConfigScreen.java      ← New: Basic Options config screen (e.g., Boss Behavior, Visual Effects)
+│       │               │   └── GuiAdvancedConfigScreen.java   ← New: Advanced Options config screen (e.g., Scaling, Abilities, Entities, Minions)
 │       │               ├── commands
 │       │               │   └── BossProfileCommand.java
 │       │               ├── config
 │       │               │   └── ConfigHandler.java
 │       │               ├── data
 │       │               │   └── ScalingProfileLoader.java
+│       │               ├── entities
+│       │               │   └── EntityBossMinion.java
 │       │               ├── events
 │       │               │   ├── BossMobEnhancer.java
 │       │               │   ├── PassiveMobHostilityHandler.java
