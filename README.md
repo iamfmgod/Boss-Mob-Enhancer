@@ -1,4 +1,4 @@
-Boss Mob Enhancer
+zBoss Mob Enhancer
 Version: 1.0 • Minecraft 1.12.2 • Forge Compatible
 Unleash legendary chaos. Boss Mob Enhancer dynamically upgrades your Minecraft mobs into elite-tier enemies with unpredictable personalities, devastating powers, and epic visual flair. Every battle becomes a unique, memorable event.
 ✦ Features:
