@@ -27,7 +27,6 @@ Accessible in-game via Forge’s mod menu or manually via bossmobenhancer.cfg. K
 💡 For Mod Developers:
 Boss Mob Enhancer is designed to be extensible. Easily plug in new abilities, scale logic, or UI elements. Planning a framework to expose boss profiles and NBT tags for integration with other mods or mapmakers.
 
-Compiled on mccreator due to IDE trouble; will resolve ASAP
 
 Made with the assistance of Sweep AI and Copilot.
 
