@@ -1,0 +1,55 @@
+{
+  "block.enshrouded_beacon.ambient": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "bossmobenhancer:blocks/enshrouded_beacon/ambient",
+        "stream": true
+      }
+    ]
+  },
+  "block.enshrouded_beacon.activate": {
+    "category": "block",
+    "sounds": [
+      "bossmobenhancer:blocks/enshrouded_beacon/activate"
+    ]
+  },
+  "entity.boss.roar": {
+    "category": "hostile",
+    "sounds": [
+      {
+        "name": "bossmobenhancer:entities/boss/roar",
+        "volume": 2.0,
+        "pitch": 0.8
+      }
+    ]
+  },
+  "entity.boss.minion_spawn": {
+    "category": "hostile",
+    "sounds": [
+      "bossmobenhancer:entities/boss/minion_spawn"
+    ]
+  },
+  "item.lunar_blessed_apple.eat": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "bossmobenhancer:items/lunar_blessed_apple/eat",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "ui.curse_apply": {
+    "category": "master",
+    "sounds": [
+      "bossmobenhancer:ui/curse_apply"
+    ]
+  },
+  "ui.curse_cancel": {
+    "category": "master",
+    "sounds": [
+      "bossmobenhancer:ui/curse_cancel"
+    ]
+  }
+}

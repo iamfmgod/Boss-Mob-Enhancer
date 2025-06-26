@@ -1,0 +1,39 @@
+tile.bossmobenhancer.enshrouded_beacon.name=Balise Enshroudie
+item.bossmobenhancer.lunar_blessed_apple.name=Pomme Lunaire Bénie
+entity.bossmobenhancer.boss_minion.name=Sbire du Boss
+
+gui.bossmobenhancer.container.enshrouded_beacon=Balise Enshroudie
+gui.bossmobenhancer.curse_selector.title=Sélecteur de Malédiction
+gui.bossmobenhancer.curse_selector.button.apply=Appliquer Malédiction
+gui.bossmobenhancer.curse_selector.button.cancel=Annuler
+
+bossmobenhancer.curse.0=Toucher Nécrosant
+bossmobenhancer.curse.1=Malédiction de Cécité
+bossmobenhancer.curse.2=Malédiction de Lenteur
+bossmobenhancer.curse.3=Brouillard Vampirique
+bossmobenhancer.curse.4=Courroux Statique
+bossmobenhancer.curse.5=Onde de Terreur
+bossmobenhancer.curse.6=Malédiction de la Faim
+bossmobenhancer.curse.7=Brûlure du Destin
+
+tooltip.bossmobenhancer.lunar_blessed_apple.line1=Une bénédiction récoltée sous l'éclipse lunaire.
+tooltip.bossmobenhancer.lunar_blessed_apple.line2=Augmente définitivement la vie maximale (jusqu’à +64).
+tooltip.bossmobenhancer.lunar_blessed_apple.line3=Confère Régénération, Résistance et Vision Nocturne.
+
+chat.bossmobenhancer.boss_spawned=Le seigneur %s s'est éveillé !
+chat.bossmobenhancer.converted_to_hostile=%s s'est mis en colère et est devenu hostile !
+
+config.bossmobenhancer.category.general=Paramètres Généraux
+config.bossmobenhancer.enhancementChance.name=Chance d'Amélioration du Boss
+config.bossmobenhancer.enhancementChance.tooltip=Chance qu’un mob éligible devienne un boss.
+config.bossmobenhancer.maxTier.name=Rang Maximal du Boss
+config.bossmobenhancer.maxTier.tooltip=Rang de puissance maximal des boss.
+config.bossmobenhancer.enableBuffs.name=Activer les Buffs des Boss
+config.bossmobenhancer.enableBuffs.tooltip=Permet aux boss de gagner potions et attributs.
+config.bossmobenhancer.enableTerrain.name=Activer la Manipulation de Terrain
+config.bossmobenhancer.enableTerrain.tooltip=Permet aux boss de remodeler leur environnement.
+config.bossmobenhancer.enableMinions.name=Activer l'Appel de Sbires
+config.bossmobenhancer.enableMinions.tooltip=Permet aux boss d'invoquer des sbires alliés.
+
+command.bossmobenhancer.no_permission=Vous n’avez pas la permission d’utiliser cette commande.
+command.bossmobenhancer.usage.select_curse=/curse <id> – Sélectionne une malédiction par son ID (0–7).

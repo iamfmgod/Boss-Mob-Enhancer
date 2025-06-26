@@ -1,0 +1,39 @@
+tile.bossmobenhancer.enshrouded_beacon.name=Faro Envolvente
+item.bossmobenhancer.lunar_blessed_apple.name=Manzana Bendita Lunar
+entity.bossmobenhancer.boss_minion.name=Esbirro del Señor
+
+gui.bossmobenhancer.container.enshrouded_beacon=Faro Envolvente
+gui.bossmobenhancer.curse_selector.title=Selector de Maldiciones
+gui.bossmobenhancer.curse_selector.button.apply=Aplicar Maldición
+gui.bossmobenhancer.curse_selector.button.cancel=Cancelar
+
+bossmobenhancer.curse.0=Toque Marchito
+bossmobenhancer.curse.1=Maldición de Ceguera
+bossmobenhancer.curse.2=Maldición Lenta
+bossmobenhancer.curse.3=Niebla Vampírica
+bossmobenhancer.curse.4=Maldición Estática
+bossmobenhancer.curse.5=Pulso de Terror
+bossmobenhancer.curse.6=Maldición del Hambre
+bossmobenhancer.curse.7=Marca del Apocalipsis
+
+tooltip.bossmobenhancer.lunar_blessed_apple.line1=Una bendición cosechada bajo el eclipse lunar.
+tooltip.bossmobenhancer.lunar_blessed_apple.line2=Aumenta permanentemente la salud máxima (hasta +64).
+tooltip.bossmobenhancer.lunar_blessed_apple.line3=Otorga Regeneración, Resistencia y Visión Nocturna.
+
+chat.bossmobenhancer.boss_spawned=¡Lord %s se ha despertado!
+chat.bossmobenhancer.converted_to_hostile=%s se ha enfurecido y se ha vuelto hostil.
+
+config.bossmobenhancer.category.general=Configuración General
+config.bossmobenhancer.enhancementChance.name=Probabilidad de Mejora de Boss
+config.bossmobenhancer.enhancementChance.tooltip=Probabilidad de que un mob apto se convierta en boss.
+config.bossmobenhancer.maxTier.name=Nivel Máximo de Boss
+config.bossmobenhancer.maxTier.tooltip=Nivel de poder máximo para bosses.
+config.bossmobenhancer.enableBuffs.name=Habilitar Buffs de Boss
+config.bossmobenhancer.enableBuffs.tooltip=Permitir que los bosses obtengan pociones y mejoras de atributos.
+config.bossmobenhancer.enableTerrain.name=Habilitar Manipulación de Terreno
+config.bossmobenhancer.enableTerrain.tooltip=Permitir que los bosses remodelen su entorno.
+config.bossmobenhancer.enableMinions.name=Habilitar Invocación de Esbirros
+config.bossmobenhancer.enableMinions.tooltip=Permitir que los bosses invoquen esbirros aliados.
+
+command.bossmobenhancer.no_permission=No tienes permiso para usar este comando.
+command.bossmobenhancer.usage.select_curse=/curse <id> – Selecciona una maldición por su ID (0–7).

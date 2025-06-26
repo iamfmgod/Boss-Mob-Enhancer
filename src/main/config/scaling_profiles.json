@@ -1,0 +1,42 @@
+{
+  "Balanced": {
+    "healthWeight": 1.0,
+    "playerCountWeight": 1.0,
+    "maxTier": 4
+  },
+  "Aggressive": {
+    "healthWeight": 1.5,
+    "playerCountWeight": 1.2,
+    "maxTier": 4
+  },
+  "Brutal": {
+    "healthWeight": 2.0,
+    "playerCountWeight": 2.0,
+    "maxTier": 4
+  },
+  "SkyblockFriendly": {
+    "healthWeight": 0.5,
+    "playerCountWeight": 0.0,
+    "maxTier": 2
+  },
+  "SoloSurvivor": {
+    "healthWeight": 0.7,
+    "playerCountWeight": 0.1,
+    "maxTier": 3
+  },
+  "Raider": {
+    "healthWeight": 1.8,
+    "playerCountWeight": 2.5,
+    "maxTier": 4
+  },
+  "BerserkerRush": {
+    "healthWeight": 3.0,
+    "playerCountWeight": 0.0,
+    "maxTier": 4
+  },
+  "Endwalker": {
+    "healthWeight": 1.2,
+    "playerCountWeight": 0.8,
+    "maxTier": 5
+  }
+}

@@ -1,0 +1,39 @@
+tile.bossmobenhancer.enshrouded_beacon.name=笼罩信标
+item.bossmobenhancer.lunar_blessed_apple.name=月之赐福苹果
+entity.bossmobenhancer.boss_minion.name=Boss爪牙
+
+gui.bossmobenhancer.container.enshrouded_beacon=笼罩信标
+gui.bossmobenhancer.curse_selector.title=诅咒选择器
+gui.bossmobenhancer.curse_selector.button.apply=应用诅咒
+gui.bossmobenhancer.curse_selector.button.cancel=取消
+
+bossmobenhancer.curse.0=枯萎之触
+bossmobenhancer.curse.1=失明诅咒
+bossmobenhancer.curse.2=迟缓诅咒
+bossmobenhancer.curse.3=吸血迷雾
+bossmobenhancer.curse.4=静电诅咒
+bossmobenhancer.curse.5=恐惧脉冲
+bossmobenhancer.curse.6=饥饿诅咒
+bossmobenhancer.curse.7=末日烙印
+
+tooltip.bossmobenhancer.lunar_blessed_apple.line1=在月食下收获的祝福。
+tooltip.bossmobenhancer.lunar_blessed_apple.line2=永久增加最大生命值（最多+64）。
+tooltip.bossmobenhancer.lunar_blessed_apple.line3=赋予再生、抗性和夜视。
+
+chat.bossmobenhancer.boss_spawned=领主 %s 已觉醒！
+chat.bossmobenhancer.converted_to_hostile=%s 勃然大怒，变得敌对！
+
+config.bossmobenhancer.category.general=常规设置
+config.bossmobenhancer.enhancementChance.name=Boss强化几率
+config.bossmobenhancer.enhancementChance.tooltip=合格生物成为Boss的几率。
+config.bossmobenhancer.maxTier.name=最大Boss等级
+config.bossmobenhancer.maxTier.tooltip=Boss的最大力量等级。
+config.bossmobenhancer.enableBuffs.name=启用Boss增益
+config.bossmobenhancer.enableBuffs.tooltip=允许Boss获得药水和属性增益。
+config.bossmobenhancer.enableTerrain.name=启用地形操纵
+config.bossmobenhancer.enableTerrain.tooltip=允许Boss改造周围地形。
+config.bossmobenhancer.enableMinions.name=启用爪牙召唤
+config.bossmobenhancer.enableMinions.tooltip=允许Boss召唤盟友爪牙。
+
+command.bossmobenhancer.no_permission=您没有权限使用此命令。
+command.bossmobenhancer.usage.select_curse=/curse <id> – 通过ID选择诅咒 (0–7)。
