@@ -1,0 +1,39 @@
+tile.bossmobenhancer.enshrouded_beacon.name=Verschleierter Leuchtfeuer
+item.bossmobenhancer.lunar_blessed_apple.name=Lunargesegneter Apfel
+entity.bossmobenhancer.boss_minion.name=Boss-Gefolgsmann
+
+gui.bossmobenhancer.container.enshrouded_beacon=Verschleierter Leuchtfeuer
+gui.bossmobenhancer.curse_selector.title=Fluchauswahl
+gui.bossmobenhancer.curse_selector.button.apply=Fluch anwenden
+gui.bossmobenhancer.curse_selector.button.cancel=Abbrechen
+
+bossmobenhancer.curse.0=Welkende Berührung
+bossmobenhancer.curse.1=Fluch der Blindheit
+bossmobenhancer.curse.2=Träge Verwünschung
+bossmobenhancer.curse.3=Vampirischer Nebel
+bossmobenhancer.curse.4=Fluch der Statik
+bossmobenhancer.curse.5=Terrorwelle
+bossmobenhancer.curse.6=Fluch des Hungers
+bossmobenhancer.curse.7=Brand des Untergangs
+
+tooltip.bossmobenhancer.lunar_blessed_apple.line1=Ein Segen, geerntet unter Mondfinsternis.
+tooltip.bossmobenhancer.lunar_blessed_apple.line2=Erhöht dauerhaft die maximale Gesundheit (bis +64).
+tooltip.bossmobenhancer.lunar_blessed_apple.line3=Gewährt Regeneration, Widerstand und Nachtsicht.
+
+chat.bossmobenhancer.boss_spawned=Der Boss %s ist erwacht !
+chat.bossmobenhancer.converted_to_hostile=%s wurde wütend und ist nun feindselig !
+
+config.bossmobenhancer.category.general=Allgemeine Einstellungen
+config.bossmobenhancer.enhancementChance.name=Boss­verstärkungschance
+config.bossmobenhancer.enhancementChance.tooltip=Chance, dass ein passender Mob Boss wird.
+config.bossmobenhancer.maxTier.name=Maximale Bossstufe
+config.bossmobenhancer.maxTier.tooltip=Maximale Machtstufe von Bossen.
+config.bossmobenhancer.enableBuffs.name=Bosse erhalten Buffs
+config.bossmobenhancer.enableBuffs.tooltip=Ermöglicht Bossen Trank- und Attributsverstärkungen.
+config.bossmobenhancer.enableTerrain.name=Geländeveränderung aktivieren
+config.bossmobenhancer.enableTerrain.tooltip=Ermöglicht Bossen, ihre Umgebung zu formen.
+config.bossmobenhancer.enableMinions.name=Schergen­beschwörung aktivieren
+config.bossmobenhancer.enableMinions.tooltip=Ermöglicht Bossen, verbündete Schergen zu beschwören.
+
+command.bossmobenhancer.no_permission=Du hast keine Berechtigung, diesen Befehl zu verwenden.
+command.bossmobenhancer.usage.select_curse=/curse <id> – Wähle einen Fluch per ID (0–7).
