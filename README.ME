@@ -111,62 +111,90 @@ For additional details, refer to the in-mod configuration screens and tooltips p
 BossMobEnhancer/                          // Root directory for your mod project.
 ├── build.gradle                          // Gradle build file.
 ├── settings.gradle                       // Gradle settings file.
+├── gradle/                               // Gradle scripts and wrapper.
+│   ├── scripts/
+│   │   ├── dependencies.gradle
+│   │   ├── extra.gradle
+│   │   ├── helpers.gradle
+│   │   ├── publishing.gradle
+│   └── wrapper/
+│       ├── gradle-wrapper.jar
 ├── src
 │   └── main
 │       ├── java
 │       │   └── com
 │       │       └── example
 │       │           └── bossmobenhancer
-│       │               ├── MainMod.java                      // ✅ Registers blocks, items, entities, configs, GUI handler, network packets.
+│       │               ├── MainMod.java                      // Registers blocks, items, entities, configs, GUI handler, network packets, and proxies.
+│       │               ├── CommonProxy.java                  // Server/common init stubs (no client-only imports here).
 │       │               ├── ai                                // Boss logic and behavioral enhancements.
+│       │               │   ├── SpecialAbilities.java         // AI rules for boss actions.
+│       │               │   ├── ArmorHandler.java             // Applies armor-based effects and weight penalties.
+│       │               │   ├── AttributeSyncer.java          // Syncs dynamic attributes between server and client.
+│       │               │   ├── BehaviorScaler.java           // Adjusts AI task priorities based on boss phase.
+│       │               │   ├── MinionSpawner.java            // Handles boss-minion summon logic.
+│       │               │   ├── ParticleEmitter.java          // Emits custom particles during abilities.
+│       │               │   ├── TerrainManipulator.java       // Alters terrain for special boss events.
+│       │               │   ├── DefensiveAbilities.java       // Defensive boss abilities (shields, resistance, etc).
+│       │               │   ├── FireAbilities.java            // Fire and heat-based boss abilities.
+│       │               │   ├── IceAbilities.java             // Ice and cold-based boss abilities.
+│       │               │   ├── PhysicalAbilities.java        // Physical and force-based boss abilities.
+│       │               │   ├── PoisonAbilities.java          // Poison, decay, and wither boss abilities.
+│       │               │   ├── StormAbilities.java           // Storm, lightning, and wind boss abilities.
+│       │               │   └── UtilityAbilities.java         // Utility, blink, web, and time-based boss abilities.
 │       │               ├── blocks                            // Custom blocks.
 │       │               │   └── BlockEnshroudedBeacon.java    // Custom beacon block with GUI activation.
 │       │               ├── client
-│       │               │   ├── BossOverlayHandler.java       // Renders boss health bars and HUD info.
-│       │               │   ├── BossRegistry.java             // Registry for active tracked boss entities.
-│       │               │   ├── CustomBossBarRenderer.java      // NEW: Custom boss bar GUI rendering boss bar based on health and phase.
-│       │               │   ├── GuiFactory.java               // ✅ Launches mod config screen from Mod List.
+│       │               │   ├── ClientProxy.java              // Client-only init (register renderers, overlays).
+│       │               │   ├── BossOverlayHandler.java       // Handles boss-bar events without direct RenderLivingBase imports.
+│       │               │   ├── BossRegistry.java             // Tracks active boss entities.
+│       │               │   ├── CustomBossBarRenderer.java    // Custom boss-bar GUI rendering.
+│       │               │   ├── GuiFactory.java               // Launches mod config screen from Mod List.
 │       │               │   ├── GuiMainConfigScreen.java      // Top-level config hub.
 │       │               │   ├── GuiBasicConfigScreen.java     // Toggles for boss behavior and visuals.
 │       │               │   ├── GuiAdvancedConfigScreen.java  // Detailed scaling and entity control.
 │       │               │   ├── GuiHandler.java               // Handles server-side GUI open/close events.
 │       │               │   └── gui
-│       │               │       ├── GuiEnshroudedBeacon.java  // ✅ Main curse selection GUI for the beacon.
-│       │               │       └── GuiCurseButton.java       // ✅ Custom textured button with icon/hover/select visuals.
+│       │               │       ├── GuiEnshroudedBeacon.java  // Main curse-selection GUI for the beacon.
+│       │               │       └── GuiCurseButton.java       // Custom textured button with icon/hover/select visuals.
 │       │               ├── commands
 │       │               │   └── BossProfileCommand.java       // Switch scaling presets during gameplay.
 │       │               ├── config
-│       │               │   └── ConfigHandler.java            // Loads and syncs config options from disk.
+│       │               │   └── ConfigHandler.java           // Loads and syncs config options from disk.
 │       │               ├── data
-│       │               │   └── ScalingProfileLoader.java     // Loads boss behavior profiles from JSON.
+│       │               │   └── ScalingProfileLoader.java    // Loads boss behavior profiles from JSON.
 │       │               ├── entities
-│       │               │   └── EntityBossMinion.java         // Minion mob summoned during boss fights.
+│       │               │   └── EntityBossMinion.java        // Minion mob summoned during boss fights.
 │       │               ├── events
 │       │               │   ├── BossMobEnhancer.java          // Top-level gameplay hooks and triggers.
 │       │               │   ├── PassiveMobHostilityHandler.java // Converts neutral mobs when cursed/named.
 │       │               │   ├── BossLootHandler.java          // Controls drops from elite/boss mobs.
 │       │               │   ├── BossRewardHandler.java        // Distributes custom rewards after kills.
 │       │               │   ├── LordSpawnHandler.java         // Spawns ultra-rare lord-tier bosses.
-│       │               │   └── BossPhaseHandler.java         // Handles multi-phase logic; applies phase transitions based on boss health.
+│       │               │   └── BossPhaseHandler.java         // Handles multi-phase logic and transitions.
 │       │               ├── items
 │       │               │   └── ItemLunarBlessedApple.java    // Used to craft and power the Enshrouded Beacon.
-│       │               ├── network                           // ✅ Packet communication layer.
-│       │               │   ├── MessageSetCurse.java          // ✅ Packet to sync selected curse to the server.
-│       │               │   └── PacketHandler.java            // ✅ Registers and initializes packet channel.
+│       │               ├── network                          // Packet communication layer.
+│       │               │   ├── MessageSetCurse.java          // Packet to sync selected curse to the server.
+│       │               │   └── PacketHandler.java            // Registers and initializes packet channel.
+│       │               ├── registry                         // Replace manual registry with event-based handlers.
+│       │               │   ├── BlockRegistry.java           // @SubscribeEvent for blocks.
+│       │               │   ├── ItemRegistry.java            // @SubscribeEvent for items.
+│       │               │   └── ModEntityRegistry.java       // @SubscribeEvent for entities.
 │       │               ├── tileentity
-│       │               │   └── TileEntityEnshroudedBeacon.java // ✅ Applies and persists area curses in real-time.
+│       │               │   └── TileEntityEnshroudedBeacon.java // Applies and persists area curses in real-time.
 │       │               └── utils
 │       │                   ├── EnchantmentUtils.java         // Utility functions for enchantment manipulation.
 │       │                   └── NameGenerator.java            // Procedural name generator for mobs/bosses.
 │       └── resources
 │           ├── META-INF
-│           │   └── mods.toml                                // Mod metadata and mod loader config.
+│           │   └── mods.toml                              // Mod metadata and loader config.
 │           └── assets
 │               └── bossmobenhancer
 │                   ├── blockstates
-│                   │   └── enshrouded_beacon.json           // Defines block rendering and model references.
+│                   │   └── enshrouded_beacon.json         // Block rendering and model references.
 │                   ├── lang
-│                   │   ├── en_us.lang                       // UI text, descriptions, tooltip keys.
+│                   │   ├── en_us.lang                     // UI text, descriptions, tooltip keys.
 │                   │   ├── fr_fr.lang
 │                   │   ├── de_de.lang
 │                   │   ├── ja_jp.lang
@@ -174,29 +202,22 @@ BossMobEnhancer/                          // Root directory for your mod project
 │                   │   └── es_es.lang
 │                   ├── models
 │                   │   ├── block
-│                   │   │   └── enshrouded_beacon.json       // Full cube model for the beacon block.
+│                   │   │   └── enshrouded_beacon.json     // Full cube model for the beacon block.
 │                   │   └── item
-│                   │       └── enshrouded_beacon.json       // Handheld and inventory rendering.
+│                   │       └── enshrouded_beacon.json     // Handheld and inventory rendering.
 │                   ├── recipes
-│                   │   └── enshrouded_beacon.json           // Crafted from Lunar Blessed Apple and base block.
+│                   │   └── enshrouded_beacon.json         // Crafted from Lunar Blessed Apple + base block.
 │                   └── textures
 │                       ├── blocks
-│                       │   └── enshrouded_beacon.png        // All-side texture for the custom beacon.
+│                       │   └── enshrouded_beacon.png      // All-side texture for the custom beacon.
 │                       ├── gui
-│                       │   ├── enshrouded_beacon.png        // Background layout for the custom GUI.
-│                       │   └── buttons                      // ✅ NEW: Curse-specific textured buttons.
-│                       │       ├── curse_button_blindness_hex.png     // Blindness-themed (dark eye).
-│                       │       ├── curse_button_wither_touch.png      // Wither-touched (ashen glyph).
-│                       │       ├── curse_button_sluggish_curse.png    // Chains/heavy mist.
-│                       │       ├── curse_button_vampiric_fog.png      // Pale swirls/bloodstreaks.
-│                       │       ├── curse_button_static.png            // Sharp zigzag or energy burst.
-│                       │       ├── curse_button_terror_pulse.png      // Pulse ring or red haze.
-│                       │       ├── curse_button_hex_of_hunger.png     // Gnashing jaws or bite mark.
-│                       │       └── curse_button_doombrand.png         // Burning mark or ember rune.
+│                       │   ├── enshrouded_beacon.png      // Background layout for the custom GUI.
+│                       │   └── buttons                   // Curse-specific textured buttons.
+│                       │       ├── curse_button_*.png
 │                       └── items
-│                           └── lunar_blessed_apple.png      // Glowing fruit item used in beacon crafting.
+│                           └── lunar_blessed_apple.png    // Glowing fruit used in beacon crafting.
 └── config
     └── bossmobenhancer
-        ├── bossmobenhancer.cfg            // Toggles for visuals, difficulty, drop rates, etc.
-        ├── scaling_profiles.json          // Stat/effect curves keyed by biome or tier.
-        └── README.txt                     // Human-readable guide to tuning values.
+        ├── bossmobenhancer.cfg          // Toggles for visuals, difficulty, drop rates, etc.
+        ├── scaling_profiles.json        // Stat/effect curves keyed by biome or tier.
+        └── README.txt                   // Human-readable guide to tuning values.
